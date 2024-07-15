@@ -7,9 +7,12 @@ const app= express();
 const PORT = process.env.PORT || 5000;
 
 dotenv.config();
-app.use("/api/auth", authRoutes)
+
+app.use(express.json()); //from request .body
+
+app.use("/api/auth", authRoutes);
 //To excract request from request .body use the middleware
-app.use(express.json());//from request .body
+
 
 
 //app.get("/", (req, res)=>{
@@ -22,5 +25,5 @@ app.use(express.json());//from request .body
 
 app.listen(PORT, () => {
     connectToMongoDB();
-    console.log(`server Running on Port ${PORT}`);
+    console.log(`server Running on Port ${PORT}`)
 });
