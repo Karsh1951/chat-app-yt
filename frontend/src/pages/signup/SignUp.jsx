@@ -12,9 +12,13 @@ const SignUp = () => {
         confirmPassword:"",
         gender:""
     })
+/*  handle checkbox change*/
+    const handleCheckboxChange =(gender) =>{
+        setInputs({...inputs,gender})
+    }
 
     const handleSubmit = (e) =>{
-        e.preventDefault();
+        e.preventDefault(); /*prevents the page from refreshing */
         console.log(inputs);
     }
   return (
@@ -63,8 +67,9 @@ const SignUp = () => {
                         onChange={(e)=>setInputs({...inputs,confirmPassword:e.target.value
                         })}></input>
                   </div>
-
-                  <GenderCheckbox />
+                
+                
+                  <GenderCheckbox  onCheckboxChange={handleCheckboxChange} selectedGender={inputs.gender}/>
                   <Link to="/login" className="text-sm hover:underline hover:text-blue-600 mt-2 inline-block" href="#">
                       Already have an account?
                   </Link>
