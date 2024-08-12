@@ -14,7 +14,7 @@ const SignUp = () => {
         gender:""
     })
 /** use signup hook */
-    const{loading, signup}=useSignup
+    const{ loading, signup}= useSignup();
 
 /*  handle checkbox change*/
     const handleCheckboxChange =(gender) =>{
@@ -23,7 +23,7 @@ const SignUp = () => {
 
     const handleSubmit = async (e) =>{
         e.preventDefault(); /*prevents the page from refreshing */
-        await signUp(inputs);
+        await signup(inputs);
         
     }
   return (
