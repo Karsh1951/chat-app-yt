@@ -19,7 +19,7 @@ const useSignup = () => {
 			});
 
 			const data = await res.json();
-      console.log(data);
+            console.log(data);
 			
 		} catch (error) {
 			toast.error(error.message);
