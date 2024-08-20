@@ -5,7 +5,7 @@ import { useAuthContext } from "../context/AuthContext";
 const useLogin = () => {
 	const [loading, setLoading] = useState(false);
 	const { setAuthUser } = useAuthContext();
-
+//login component
 	const login = async (username, password) => {
 		const success = handleInputErrors(username, password);
 		if (!success) return;
