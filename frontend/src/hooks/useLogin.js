@@ -36,6 +36,7 @@ const useLogin = () => {
 export default useLogin;
 
 //function  for handling errors in the code
+//handling errors in the logon and sisplaying them using toast
 
 function handleInputErrors(username, password) {
 	if (!username || !password) {
