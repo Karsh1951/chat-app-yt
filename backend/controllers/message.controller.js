@@ -47,6 +47,7 @@ export const sendMessage = async( req, res )=>{
 export const getMessages = async(req, res)=>{
     try {
         //its going to give  the id field//renamed to userTOCH ( the user you are chatting with)
+        //comment
         const {id:userToChatId} = req.params;
         const senderId = req.user._id;//coming from protect route func
         const conversation = await Conversation.findOne({
